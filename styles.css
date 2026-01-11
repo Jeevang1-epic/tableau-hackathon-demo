@@ -1,71 +1,32 @@
-/* Tableau-style clean font */
 body {
-    font-family: 'Benton Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-family: 'Benton Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    background-color: #ffffff !important;
     padding: 20px;
-    background-color: #ffffff;
-    color: #333;
 }
 
-/* The Main Container */
-.container {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Headers */
-h3 {
-    color: #000;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    margin-top: 0;
-}
-
-/* "Selected Item" Text */
-#selected-item {
-    font-weight: bold;
+#selected-mark {
     color: #2a5f8b; /* Tableau Blue */
-}
-
-/* The Dropdown Box */
-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    background-color: #fff;
-}
-
-/* The Action Button */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #59a14f; /* Tableau Green */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
     font-weight: bold;
-    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #59a14f !important; /* Tableau Green */
+    border-color: #59a14f !important;
+    font-weight: bold;
     transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #437a3c; /* Darker Green on Hover */
+.btn-success:hover {
+    background-color: #437a3c !important; /* Darker Green */
+    border-color: #437a3c !important;
 }
 
-/* Hidden elements */
-.hidden {
-    display: none;
+.card {
+    border: 1px solid #d3d3d3 !important;
+    box-shadow: none !important; 
+    border-radius: 4px !important;
 }
 
-/* Instructions Text */
-p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.4;
+.container-fluid {
+    background-color: #ffffff;
 }
