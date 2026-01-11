@@ -1,32 +1,31 @@
 body {
     font-family: 'Benton Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
     background-color: #ffffff !important;
-    padding: 20px;
 }
 
 #selected-mark {
-    color: #2a5f8b; /* Tableau Blue */
-    font-weight: bold;
+    color: #2a5f8b !important; /* Tableau Blue */
+    font-weight: 700;
 }
 
 .btn-success {
     background-color: #59a14f !important; /* Tableau Green */
     border-color: #59a14f !important;
     font-weight: bold;
-    transition: background-color 0.2s;
 }
 
 .btn-success:hover {
-    background-color: #437a3c !important; /* Darker Green */
+    background-color: #437a3c !important; /* Darker Green on Hover */
     border-color: #437a3c !important;
 }
 
-.card {
+.form-control {
+    border-radius: 2px !important;
     border: 1px solid #d3d3d3 !important;
-    box-shadow: none !important; 
-    border-radius: 4px !important;
+    font-size: 14px !important;
 }
 
-.container-fluid {
-    background-color: #ffffff;
+.card {
+    border: none !important; /* Removes the Bootstrap border */
+    box-shadow: none !important; /* Removes the shadow for a flat look */
 }
