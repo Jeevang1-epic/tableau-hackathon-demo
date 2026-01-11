@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actionable Analytics Extension</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/tableau/extensions-api@master/lib/tableau.extensions.1.latest.js"></script>
+    <style>
+        body { padding: 20px; background-color: #f8f9fa; }
+        #action-panel { display: none; } /* Hidden until data is selected */
+        .card { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="instruction-panel">
+            <h5 class="text-primary">Action Center</h5>
+            <p class="text-muted">Select a data point on the dashboard to take action.</p>
+        </div>
+
+        <div id="action-panel" class="card p-3">
+            <h5>Take Action</h5>
+            <p><strong>Selected Item:</strong> <span id="selected-mark" class="text-info">None</span></p>
+            
+            <div class="form-group">
+                <label>Choose Action:</label>
+                <select class="form-control" id="action-type">
+                    <option>Send Discount Email</option>
+                    <option>Escalate to Support</option>
+                    <option>Flag for Review</option>
+                </select>
+            </div>
+            
+            <button class="btn btn-success btn-block" onclick="sendAction()">Execute Action</button>
+        </div>
+        
+        <div id="success-msg" class="alert alert-success mt-3" style="display:none;">
+            Action Sent Successfully!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
