@@ -7,7 +7,7 @@
     <author name="Puttala Jeevan Kumar" email="ipad11169@gmail.com" organization="Independent Developer" website="https://github.com/Jeevang1-epic/tableau-hackathon-demo"/>
     <min-api-version>1.0</min-api-version>
     <source-location>
-      <url>https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html</url>
+     <url>https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html</url>
     </source-location>
     <icon></icon>
   </dashboard-extension>
@@ -17,3 +17,4 @@
     </resource>
   </resources>
 </manifest>
+
