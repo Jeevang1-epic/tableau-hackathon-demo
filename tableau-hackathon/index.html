@@ -1,45 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Actionable Analytics Extension</title>  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Action Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/gh/tableau/extensions-api@master/lib/tableau.extensions.1.latest.js"></script>
     <style>
-        body { padding: 20px; background-color: #f8f9fa; }
-        #action-panel { display: none; } /* Hidden until data is selected */
-        .card { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        :root {
+            --tableau-blue: #1f77b4;
+            --success-green: #2ca02c;
+            --bg-color: #f4f7f9;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg-color);
+            margin: 0; padding: 15px; color: #333;
+        }
+        .container {
+            background: white; border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 20px; border-top: 4px solid var(--tableau-blue);
+        }
+        .header { display: flex; align-items: center; margin-bottom: 15px; }
+        .header i { color: var(--tableau-blue); margin-right: 10px; font-size: 1.2rem; }
+        .header h5 { margin: 0; font-size: 1.1rem; color: #2c3e50; }
+        
+        #instruction-panel { text-align: center; padding: 20px; color: #7f8c8d; }
+        
+        #action-panel { display: none; animation: fadeIn 0.4s ease; }
+        
+        .data-card {
+            background: #eef2f7; border-radius: 6px;
+            padding: 12px; margin-bottom: 15px; border-left: 4px solid #3498db;
+        }
+        .label { font-size: 0.75rem; text-transform: uppercase; color: #7f8c8d; font-weight: bold; }
+        .value { font-size: 1rem; color: #2c3e50; display: block; margin-top: 4px; }
+
+        .form-group { margin-bottom: 15px; }
+        select {
+            width: 100%; padding: 10px; border-radius: 4px;
+            border: 1px solid #dcdfe6; background: white; outline: none;
+        }
+        
+        .btn-action {
+            width: 100%; background-color: var(--tableau-blue); color: white;
+            border: none; padding: 12px; border-radius: 4px; font-weight: bold;
+            cursor: pointer; transition: background 0.3s;
+        }
+        .btn-action:hover { background-color: #155a8a; }
+        .btn-action:disabled { background-color: #bdc3c7; }
+
+        #success-msg {
+            display: none; background: #d4edda; color: #155724;
+            padding: 10px; border-radius: 4px; margin-top: 10px; text-align: center;
+            font-size: 0.9rem; border: 1px solid #c3e6cb;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div id="instruction-panel">
-            <h5 class="text-primary">Action Center</h5>
-            <p class="text-muted">Select a data point on the dashboard to take action.</p>
+    <div class="container">
+        <div class="header">
+            <i class="fas fa-bolt"></i>
+            <h5>Smart Action Center</h5>
         </div>
 
-        <div id="action-panel" class="card p-3">
-            <h5>Take Action</h5>
-            <p><strong>Selected Item:</strong> <span id="selected-mark" class="text-info">None</span></p>
-            
+        <div id="instruction-panel">
+            <i class="fas fa-mouse-pointer" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+            <p>Select a data point on your chart to trigger an automated workflow.</p>
+        </div>
+
+        <div id="action-panel">
+            <div class="data-card">
+                <span class="label">Target Entity</span>
+                <span id="selected-mark" class="value">Loading...</span>
+            </div>
+
             <div class="form-group">
-                <label>Choose Action:</label>
-                <select class="form-control" id="action-type">
-                    <option>Send Discount Email</option>
-                    <option>Escalate to Support</option>
-                    <option>Flag for Review</option>
+                <label class="label">Choose Workflow</label>
+                <select id="action-type">
+                    <option value="email">Send Priority Alert Email</option>
+                    <option value="slack">Push to Manager Slack</option>
+                    <option value="review">Flag for Manual Review</option>
                 </select>
             </div>
             
-            <button class="btn btn-success btn-block" onclick="sendAction()">Execute Action</button>
-        </div>
-        
-        <div id="success-msg" class="alert alert-success mt-3" style="display:none;">
-            Action Sent Successfully!
+            <button id="main-btn" class="btn-action" onclick="sendAction()">
+                Execute Insight Action
+            </button>
+            
+            <div id="success-msg">
+                <i class="fas fa-check-circle"></i> Workflow Triggered Successfully!
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
-
 </html>
