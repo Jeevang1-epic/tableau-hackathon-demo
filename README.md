@@ -1,22 +1,41 @@
-Smart Action Center: A Tableau Dashboard Extension
-🚀 Project Overview
-The Smart Action Center is an event-driven Tableau Dashboard Extension that transforms static dashboards into interactive command centers. It allows users to trigger real-time workflows—such as sending priority alerts or flagging items—directly from their analytical environment.
+# **Smart Action Center: Real-Time Actionable Analytics Extension**
 
-🛠️ Technical Build & Strategic Pivots
-Developed as a solo entry for the 2025 Tableau Hackathon, this project focuses on "Actionable Analytics."
+[![Tableau Extension](https://img.shields.io/badge/Tableau-Extensions%20API-blue.svg)](https://trapped-in-data.github.io/tableau-hackathon-demo/)
+[![Deployment](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-green.svg)](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)
 
-Key Decisions:
-High-Specificity Internal CSS: I intentionally pivoted from external stylesheets to internal CSS to ensure the "glassmorphism" UI remained robust against Tableau Cloud's sandbox styles while allowing for rapid, dynamic styling updates.
+## **🚀 The Vision**
+Most business dashboards are "read-only," creating a friction-filled gap between seeing an insight and taking action. The **Smart Action Center** turns Tableau from a static reporting tool into a dynamic operational command center.
 
-Tableau Extensions API: Leveraged for real-time bidirectional communication between the dashboard and the custom action panel.
+## **🛠️ The Build Journey (Step-by-Step)**
 
-Secure Hosting: Deployed on GitHub Pages to meet strict HTTPS requirements for Tableau Cloud integration.
+### **1. Integration & Environment**
+* **Tableau Cloud Sandbox:** I initialized a secure developer sandbox on **Tableau Cloud** to host the experimental dashboard environment.
+* **Worksheet Configuration:** I designed a primary visualization (**Sheet 1**) focused on city-level profitability to serve as the data source for the extension.
 
-📂 Repository Structure
-manifest.trex: Core configuration for Tableau integration.
+### **2. The Extension Architecture**
+* **Manifest Logic:** I authored a custom `manifest.trex` file to register the extension with Tableau, defining secure source locations and API permissions.
+* **Tableau Extensions API:** I implemented a bidirectional event-listener that "hooks" into the dashboard's marks-selection events.
 
-tableau-hackathon/index.html: Main logic and high-specificity UI.
+### **3. Strategic Engineering Pivot: Efficiency through Specificity**
+During development, I intentionally pivoted from external stylesheets to a **high-specificity internal CSS** approach.
+* **Resilience:** This guaranteed that my "glassmorphism" UI remained immune to conflicting default styles within the Tableau sandbox.
+* **Agility:** This "email-template" style logic allowed for instant dynamic styling updates and real-time UI feedback during the rapid hackathon sprint.
 
-index.html: Root redirection for deployment.
+## **🕹️ How to Experience the Extension**
 
-🎥 Video Demo: https://youtu.be/BdF29mRkztg?si=hKX7wuSIemAeKSPX
+### **Option A: Full Tableau Workflow (Recommended)**
+1. Open the [Tableau Hackathon Dashboard](https://jeevang1-epic.github.io/tableau-hackathon-demo/).
+2. Select any data point on **Sheet 1** (e.g., a city bar).
+3. Watch the **Smart Action Center** instantly identify the "Target Entity" and offer a menu of automated workflows.
+
+### **Option B: Independent Browser Preview**
+You can view the standalone UI and design by visiting the live deployment link:
+👉 **[Live Extension UI](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)**
+
+## **📂 Repository Structure**
+* `manifest.trex`: Core XML configuration for Tableau integration.
+* `tableau-hackathon/index.html`: The core engine, featuring the high-specificity UI and JavaScript logic.
+* `index.html`: Root-level redirection file to ensure seamless GitHub Pages routing.
+
+## **🎥 Video Demonstration**
+[![Watch the Demo](https://img.youtube.com/vi/BdF29mRkztg/0.jpg)](https://youtu.be/BdF29mRkztg)
