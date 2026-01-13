@@ -27,4 +27,4 @@ tableau-hackathon/index.html: The core logic and high-specificity styling.
 index.html: Root redirection file to handle GitHub Pages traffic.
 
 🎥 Demo
-View the full demonstration on YouTube
+View the full demonstration on YouTube : https://youtu.be/BdF29mRkztg?si=hKX7wuSIemAeKSPX
