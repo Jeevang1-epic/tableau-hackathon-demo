@@ -1,6 +1,6 @@
 # **Smart Action Center: Real-Time Actionable Analytics Extension**
 
-[![Tableau Extension](https://img.shields.io/badge/Tableau-Extensions%20API-blue.svg)](https://trapped-in-data.github.io/tableau-hackathon-demo/)
+[![Tableau Extension](https://img.shields.io/badge/Tableau-Extensions%20API-blue.svg)](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)
 [![Deployment](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-green.svg)](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)
 
 ## **🚀 The Vision**
@@ -24,7 +24,7 @@ During development, I intentionally pivoted from external stylesheets to a **hig
 ## **🕹️ How to Experience the Extension**
 
 ### **Option A: Full Tableau Workflow (Recommended)**
-1. Open the [Tableau Hackathon Dashboard](https://jeevang1-epic.github.io/tableau-hackathon-demo/).
+1. Open your Tableau Cloud dashboard.
 2. Select any data point on **Sheet 1** (e.g., a city bar).
 3. Watch the **Smart Action Center** instantly identify the "Target Entity" and offer a menu of automated workflows.
 
