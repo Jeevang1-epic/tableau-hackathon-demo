@@ -3,10 +3,10 @@
 [![Tableau Extension](https://img.shields.io/badge/Tableau-Extensions%20API-blue.svg)](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)
 [![Deployment](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-green.svg)](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)
 
-## **🚀 The Vision**
+## ** The Vision**
 Most business dashboards are "read-only," creating a friction-filled gap between seeing an insight and taking action. The **Smart Action Center** turns Tableau from a static reporting tool into a dynamic operational command center.
 
-## **🛠️ The Build Journey (Step-by-Step)**
+## ** The Build Journey (Step-by-Step)**
 
 ### **1. Integration & Environment**
 * **Tableau Cloud Sandbox:** I initialized a secure developer sandbox on **Tableau Cloud** to host the experimental dashboard environment.
@@ -21,7 +21,7 @@ During development, I intentionally pivoted from external stylesheets to a **hig
 * **Resilience:** This guaranteed that my "glassmorphism" UI remained immune to conflicting default styles within the Tableau sandbox.
 * **Agility:** This "email-template" style logic allowed for instant dynamic styling updates and real-time UI feedback during the rapid hackathon sprint.
 
-## **🕹️ How to Experience the Extension**
+## ** How to Experience the Extension**
 
 ### **Option A: Full Tableau Workflow (Recommended)**
 1. Open your Tableau Cloud dashboard.
@@ -30,12 +30,12 @@ During development, I intentionally pivoted from external stylesheets to a **hig
 
 ### **Option B: Independent Browser Preview**
 You can view the standalone UI and design by visiting the live deployment link:
-👉 **[Live Extension UI](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)**
+ **[Live Extension UI](https://jeevang1-epic.github.io/tableau-hackathon-demo/tableau-hackathon/index.html)**
 
-## **📂 Repository Structure**
+## ** Repository Structure**
 * `manifest.trex`: Core XML configuration for Tableau integration.
 * `tableau-hackathon/index.html`: The core engine, featuring the high-specificity UI and JavaScript logic.
 * `index.html`: Root-level redirection file to ensure seamless GitHub Pages routing.
 
-## **🎥 Video Demonstration**
+## ** Video Demonstration**
 [![Watch the Demo](https://img.youtube.com/vi/BdF29mRkztg/0.jpg)](https://youtu.be/BdF29mRkztg)
